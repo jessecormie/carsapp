@@ -16,20 +16,20 @@
     <%= f.text_field :address %>
   </div>
   <div class="field">
+    <%= f.label :pickUp %><br />
+    <%= f.date_select :pickUp %>
+  </div>
+  <div class="field">
+    <%= f.label :dropOff %><br />
+    <%= f.date_select :dropOff %>
+  </div>
+  <div class="field">
     <%= f.label :latitude %><br />
     <%= f.text_field :latitude %>
   </div>
   <div class="field">
     <%= f.label :longitude %><br />
     <%= f.text_field :longitude %>
-  </div>
-  <div class="field">
-    <%= f.label :pickUp %><br />
-    <%= f.text_field :pickUp %>
-  </div>
-  <div class="field">
-    <%= f.label :dropOff %><br />
-    <%= f.date_select :dropOff %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -7,8 +7,31 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div id="banner">
+	<%= image_tag("carRental.jpg", :size => "90x90") %>
+	Car Rental Services
+	
+</div>	
 <%= yield %>
+<div id="nav">
+	<ul>	
+		<li><%= link_to "Best Cars of 2014", 'http://www.caranddriver.com/features/2014-editors-choice-the-best-cars-trucks-crossovers-and-more-awards' %></li>
+		<li><%= link_to "Cars", cars_path %></li>
+		<li><%= link_to "Location", locations_path %></li>
+		<li><%= link_to "Users", users_path %></li>
+	</ul>
+</div>	
+
+<% flash.each do |key, value| %>
+	<div class="flash <%= key %>
+	<%= value %>
+	</div>
+<% end %>
+
+
+	
+
+
 
 </body>
 </html>

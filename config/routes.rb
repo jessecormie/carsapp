@@ -1,9 +1,9 @@
 Carsapp::Application.routes.draw do
+  resources :locations
+
   resources :users
 
   resources :cars
-
-  resources :locations
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

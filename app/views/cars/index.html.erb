@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Numseats</th>
+    <th>Number of Seats</th>
     <th>Cost</th>
     <th>Colour</th>
     <th>Automatic</th>
@@ -22,9 +22,9 @@
     <td><%= car.cost %></td>
     <td><%= car.colour %></td>
     <td><%= car.automatic %></td>
-    <td><%= car.image %></td>
-    <td><%= car.user_id %></td>
-    <td><%= car.location_id %></td>
+    <td><%= image_tag(car.image, :size=>"350x200")%></td>
+    <td><%= car.user.lastName %></td>
+    <td><%= car.location.address %></td>
     <td><%= link_to 'Show', car %></td>
     <td><%= link_to 'Edit', edit_car_path(car) %></td>
     <td><%= link_to 'Destroy', car, confirm: 'Are you sure?', method: :delete %></td>

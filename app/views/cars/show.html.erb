@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  <b>Numseats:</b>
+  <b>Number of Seats:</b>
   <%= @car.numSeats %>
 </p>
 
@@ -26,8 +26,7 @@
 </p>
 
 <p>
-  <b>Image:</b>
-  <%= @car.image %>
+   <%= image_tag(@car.image, :size=>"450x350")%>
 </p>
 
 <p>
@@ -39,6 +38,7 @@
   <b>Location:</b>
   <%= @car.location_id %>
 </p>
+
 
 
 <%= link_to 'Edit', edit_car_path(@car) %> |

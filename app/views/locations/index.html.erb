@@ -3,10 +3,10 @@
 <table>
   <tr>
     <th>Address</th>
+    <th>Pick Upp</th>
+    <th>Drop Off</th>
     <th>Latitude</th>
     <th>Longitude</th>
-    <th>Pickup</th>
-    <th>Dropoff</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,10 +15,10 @@
 <% @locations.each do |location| %>
   <tr>
     <td><%= location.address %></td>
-    <td><%= location.latitude %></td>
-    <td><%= location.longitude %></td>
     <td><%= location.pickUp %></td>
     <td><%= location.dropOff %></td>
+    <td><%= location.latitude %></td>
+    <td><%= location.longitude %></td>
     <td><%= link_to 'Show', location %></td>
     <td><%= link_to 'Edit', edit_location_path(location) %></td>
     <td><%= link_to 'Destroy', location, confirm: 'Are you sure?', method: :delete %></td>

@@ -13,14 +13,14 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.select :title, ["Mr", "Mrs", "Miss"] %>
   </div>
   <div class="field">
-    <%= f.label :firstName %><br />
+    <%= f.label :"First Name" %><br />
     <%= f.text_field :firstName %>
   </div>
   <div class="field">
-    <%= f.label :lastName %><br />
+    <%= f.label :"Last Name" %><br />
     <%= f.text_field :lastName %>
   </div>
   <div class="field">
@@ -28,11 +28,11 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :phoneNum %><br />
+    <%= f.label :"Phone Number" %><br />
     <%= f.text_field :phoneNum %>
   </div>
   <div class="field">
-    <%= f.label :dob %><br />
+    <%= f.label :"Date of Birth" %><br />
     <%= f.date_select :dob %>
   </div>
   <div class="actions">

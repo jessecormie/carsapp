@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  numSeats: 1
+  cost: 1.5
+  colour: MyString
+  automatic: false
+  image: MyString
+  user_id: 1
+  location_id: 1
+
+two:
+  name: MyString
+  numSeats: 1
+  cost: 1.5
+  colour: MyString
+  automatic: false
+  image: MyString
+  user_id: 1
+  location_id: 1

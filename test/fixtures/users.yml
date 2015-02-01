@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: 
+  firstName: 
+  lastName: 
+  email: 
+  phoneNum: 
+  dob: 2015-02-01
+
+two:
+  title: 
+  firstName: 
+  lastName: 
+  email: 
+  phoneNum: 
+  dob: 2015-02-01

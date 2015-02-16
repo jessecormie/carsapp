@@ -35,6 +35,15 @@
     <%= f.label :"Date of Birth" %><br />
     <%= f.date_select :dob %>
   </div>
+  <div class="field">
+	<%= f.label :username %><br />
+	<%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password_digest %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

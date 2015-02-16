@@ -7,6 +7,8 @@ gem 'rails', '3.2.1'
 
 gem 'sqlite3'
 
+gem 'bootstrap-sass', '3.2.0.0'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -20,10 +22,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'geocoder'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+ gem 'bcrypt-ruby', '~> 3.0.1'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150201113717) do
+ActiveRecord::Schema.define(:version => 20150210153831) do
 
   create_table "cars", :force => true do |t|
     t.string   "name"
@@ -43,8 +43,10 @@ ActiveRecord::Schema.define(:version => 20150201113717) do
     t.string   "email"
     t.integer  "phoneNum"
     t.date     "dob"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "username"
+    t.string   "password_digest"
   end
 
 end

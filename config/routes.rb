@@ -24,10 +24,10 @@ Carsapp::Application.routes.draw do
   match '/about', :to => 'Pages#about'
   match '/search', :to => 'cars#search'
 
-  resources :cars do
-	resources :posts
-  end	
-  
+resources :cars do	
+	resources:posts
+end
+
   resources :locations
 
   resources :users

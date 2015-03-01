@@ -9,7 +9,7 @@ class Blogmailer < ActionMailer::Base
   def register(user)
     if user
 		@user = user
-		mail(:to => user.email, :subject => "Welcome to the movie blog site")
+		mail(:to => user.email, :subject => "Welcome to car rentals")
   end
 end
 end

@@ -51,6 +51,7 @@ class CarsController < ApplicationController
   # POST /cars.json
   def create
     @car = Car.new(params[:car])
+	
 
     respond_to do |format|
       if @car.save

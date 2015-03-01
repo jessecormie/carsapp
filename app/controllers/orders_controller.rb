@@ -41,9 +41,11 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(params[:order])
-
-    respond_to do |format|
-      if @order.save
+	
+	#@car.user_id = @current_user.id (Want to assign user_id to that has been chosen's user_id)
+    
+	respond_to do |format|
+      if @order.save		
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render json: @order, status: :created, location: @order }
 		

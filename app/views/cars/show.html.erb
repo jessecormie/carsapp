@@ -28,18 +28,38 @@
 <p>
    <%= image_tag(@car.image, :size=>"350x250")%>
 </p>
-
-<p>
-  <b>User:</b>
-  <%= @car.user_id %>
-</p>
+<% if adminsigned_in? %>
+	<p>
+		<b>User:</b>
+		<%= @car.user_id %>
+	</p>
+<% end %>
 
 <p>
   <b>Location:</b>
-  <%= @car.location_id %>
+  <%= @car.location.address %>
+  <br>
+  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@car.location.latitude}%2C#{@car.location.longitude}" %>
 </p>
-
-
-
+<%= button_to "Rent", new_order_path, :class => "button", :method => :get  %>
+<br>
+<h2>Please leave a comment: </h2>
+	<%= form_for([@car, Post.new]) do |f| %>
+		<%= f.text_area :content, :rows => 3 %>
+		<div class="actions">
+		<%= f.submit "Post a Comment" %>
+		</div>
+	<% end %>
+<% if @car.posts.empty? %>
+	<h3>You are the first t comment </h3>
+<% else %>
+	<h2>What others felt about this:</h2>
+		<% @car.posts.reverse.each do |post| %>
+			<p><%= post.content %>
+			Posted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %></p>
+		<% end %>
+<% end %>
+<% if adminsigned_in? %>
 <%= link_to 'Edit', edit_car_path(@car) %> |
+<% end %>
 <%= link_to 'Back', cars_path %>

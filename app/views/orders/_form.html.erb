@@ -1,0 +1,33 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :"Card Type" %><br />
+     <%= f.select :cardType , ["Debit Card", "Credit Card", "Paypal"]%>
+  </div>
+  <div class="field">
+    <%= f.label :"Card Number" %><br />
+    <%= f.number_field :cardNo %>
+  </div>
+  <div class="field">
+    <%= f.label :"Pick Up" %><br />
+    <%= f.date_select :pickUp, {:order => [:day, :month, :year], start_year: Time.now.year, end_year: Time.now.year + 10} %>
+  </div>
+  <div class="field">
+    <%= f.label :"Drop Off" %><br />
+    <%= f.date_select :dropOff, {:order => [:day, :month, :year], start_year: Time.now.year, end_year: Time.now.year + 10} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

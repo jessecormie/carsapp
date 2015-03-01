@@ -1,0 +1,16 @@
+<h1>Sign in</h1>
+<%=form_tag createadmin_path do %>
+	<table align=center>
+	<tr>
+		<td><%= label_tag :username %></td>
+		<td><%=text_field_tag :username %>
+	</tr>
+	<tr>
+	<td><%=label_tag :password %></td>
+	<td><%= password_field_tag :password %>
+	</tr>
+<tr>
+	<td><%=submit_tag "Sign in"%></td>
+</tr>
+</table>
+<% end%>

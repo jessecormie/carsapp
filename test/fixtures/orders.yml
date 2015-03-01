@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cardType: MyString
+  cardNo: 1
+  pickUp: 2015-02-28
+  dropOff: 2015-02-28
+
+two:
+  cardType: MyString
+  cardNo: 1
+  pickUp: 2015-02-28
+  dropOff: 2015-02-28

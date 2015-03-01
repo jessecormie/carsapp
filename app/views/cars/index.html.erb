@@ -1,6 +1,19 @@
 <h1>Listing cars</h1>
 
+<div id="search">
+	<%= render :partial => 'cars/search' %>
+</div>	
+
 <table>
+<col width="90">
+<col width="135">
+<col width="125">
+<col width="125">
+<col width="125">
+<col width="175">
+<col width="190">
+<col width="50">
+<col width="50">
   <tr>
     <th>Name</th>
     <th>Number of Seats</th>
@@ -8,7 +21,6 @@
     <th>Colour</th>
     <th>Automatic</th>
     <th>Image</th>
-    <th>User</th>
     <th>Location</th>
     <th></th>
     <th></th>
@@ -22,16 +34,20 @@
     <td><%= car.cost %></td>
     <td><%= car.colour %></td>
     <td><%= car.automatic %></td>
-    <td><%= image_tag(car.image, :size=>"175x75")%></td>
-    <td><%= car.user.lastName %></td>
+    <td><%= image_tag(car.image, :size=>"150x100")%></td>
+	
     <td><%= car.location.address %></td>
     <td><%= link_to 'Show', car %></td>
-    <td><%= link_to 'Edit', edit_car_path(car) %></td>
-    <td><%= link_to 'Destroy', car, confirm: 'Are you sure?', method: :delete %></td>
+	<% if adminsigned_in? %>
+		<td><%= link_to 'Edit', edit_car_path(car) %></td>
+		<td><%= link_to 'Destroy', car, confirm: 'Are you sure?', method: :delete %></td>
+	<% end %>
+	
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Car', new_car_path %>
+<% if adminsigned_in? %>
+	<%= link_to 'New Car', new_car_path %>
+<% end %>

@@ -12,6 +12,16 @@ class CarsController < ApplicationController
 
   # GET /cars/1
   # GET /cars/1.json
+    def search
+	@cars = Car.search params[:q]
+	 unless @cars.empty?
+		render 'index'
+	else	
+		flash[:notice] = 'No rentals in this location'
+		render 'index'
+	end
+  end
+		
   def show
     @car = Car.find(params[:id])
 

@@ -1,4 +1,10 @@
 Carsapp::Application.routes.draw do
+  resources :posts
+
+  resources :orders
+
+  resources :admins
+
   get "sessions/new"
 
   get "sessions/create"
@@ -12,8 +18,16 @@ Carsapp::Application.routes.draw do
   resources :sessions
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
+  match '/adminsignout', :to => 'sessions#destroyadmin'
+  match '/adminsignin', :to => 'sessions#newadmin'
+  match '/createadmin', :to => 'sessions#createadmin'
   match '/about', :to => 'Pages#about'
+  match '/search', :to => 'cars#search'
 
+  resources :cars do
+	resources :posts
+  end	
+  
   resources :locations
 
   resources :users

@@ -10,12 +10,12 @@ class ApplicationController < ActionController::Base
 	end
   end
   
-  def authoriseAdmin
-	unless signed_in? && @current_user.admin
-		store_location
-	redirect_to signin_path, :notice => "You need to be an administrator to do this"
-end
-end
+ def authoriseAdmin
+    unless adminsigned_in? 
+        store_location
+        redirect_to adminsignin_path, :notice => "You need to be an administrator to do this"
+    end
+   end
   
 private
 def store_location

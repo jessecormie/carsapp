@@ -112,9 +112,10 @@ DEPENDENCIES
   bootstrap-sass (= 3.2.0.0)
   coffee-rails (~> 3.2.1)
   geocoder
-  jquery-rails (~> 2.3.0)
+  jquery-rails (>= 0.2.5)
   jquery-ui-rails
   rails (= 3.2.1)
   sass-rails (~> 3.2.3)
   sqlite3
+  thor (>= 0.14.4)
   uglifier (>= 1.0.3)

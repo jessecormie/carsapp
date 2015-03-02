@@ -22,8 +22,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'jquery-rails', '>=0.2.5'
+gem 'thor', '>=0.14.4'
+
 gem 'geocoder'
-gem 'jquery-rails', '~> 2.3.0'
+#gem 'jquery-rails', '~> 2.3.0'
 
 gem "jquery-ui-rails"
 

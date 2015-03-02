@@ -26,8 +26,8 @@
 </p>
 
 <p>
-  <b>Date of Birth:</b>
-  <%= @user.dob %>
+  <b>Age:</b>
+  <%= ((Date.today-@user.dob).to_i)/365 %>
 </p>
 
 <p>

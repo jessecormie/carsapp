@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
+<div id="font">
+<p>Click here to read in larger font</p>
 
+<script>
+function fontFunction() {
+    document.getElementById("font").style.fontSize = "30px"; 
+}
+</script>
+
+<button type="button" onclick="fontFunction()">Click Me!</button>
+	
 <p>
   <b>Name:</b>
   <%= @car.name %>
@@ -70,3 +80,4 @@
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <% end %>
 <%= link_to 'Back', cars_path %>
+</div>

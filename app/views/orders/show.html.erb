@@ -13,4 +13,16 @@
   <b>Drop Off:</b>
   <%= @order.dropOff %>
 </p>
-<p><i>If the vehicle is dropped off late you will receive a fee</i></p>
+	<b>Number of Days:</b>
+		<%= (@order.dropOff-@order.pickUp).to_i %>
+<br>
+<br>
+
+<button id="button">Terms and Conditions</button>
+<p id="demo"></p>
+<script>
+document.getElementById("button").addEventListener("click", days);
+function days(){
+document.getElementById("demo").innerHTML = "<i>If the vehicle is dropped off late you will receive a fine</i>";
+}
+</script>	

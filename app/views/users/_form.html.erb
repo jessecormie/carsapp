@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :"Date of Birth" %><br />
-    <%= f.date_select :dob, {:order => [:day, :month, :year], start_year: 1970, end_year: 1991}  %>
+    <%= f.date_select :dob, {:order => [:day, :month, :year], start_year: 1940, end_year: Time.now.year - 23}  %>
   </div>
   <div class="field">
 	<%= f.label :"Username" %><br />

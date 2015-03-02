@@ -9,13 +9,13 @@
 <body>
 <div id="banner">
 	<%= image_tag("carRental2.png", :size => "160x100") %>
-	<font size="20">Car Rental Services</font>
-	
-	
-</div>	
+	<font size="20">Car Rental Services</font>	
+</div>
+
 <%= yield %>
+
 <div id="nav">
-<br>
+
 <br>
 	<ul>
 <% if !signed_in? && !adminsigned_in? %>
